@@ -14,6 +14,7 @@ As an OSINT enthusiast and developer, I recognized the potential of combining Sh
 - **AI Developers**: Those building MCP-compatible applications
 - **Cybersecurity Teams**: Organizations requiring username enumeration tools
 - **Ethical Hackers**: Individuals performing responsible security research
+- **Journalist**: Individuals using AI to find the truth about current events
 
 ## Development Phases
 
@@ -28,6 +29,7 @@ As an OSINT enthusiast and developer, I recognized the potential of combining Sh
 - Established project directory structure
 
 **Key Decisions**:
+
 - Chose FastMCP for its Pythonic API and comprehensive MCP support
 - Used uv for dependency management to ensure reproducible builds
 - Structured code for easy testing and maintenance
@@ -43,11 +45,13 @@ As an OSINT enthusiast and developer, I recognized the potential of combining Sh
 - Created the `search_username` MCP tool
 
 **Challenges Faced**:
+
 - Sherlock's output formats required careful parsing
 - Handling timeouts and missing CLI installations
 - Balancing performance with reliability
 
 **Solutions**:
+
 - Used temporary files for JSON output to avoid stdout complexity
 - Implemented multiple error checks and graceful degradation
 - Added timeout handling to prevent hanging processes
@@ -63,6 +67,7 @@ As an OSINT enthusiast and developer, I recognized the potential of combining Sh
 - Added test cases for success, error, and edge scenarios
 
 **Technical Highlights**:
+
 - Separated implementation from decoration for testability
 - Used pytest-mock for subprocess simulation
 - Ensured Docker compatibility with Sherlock CLI installation
@@ -78,6 +83,7 @@ As an OSINT enthusiast and developer, I recognized the potential of combining Sh
 - Added relevant topics and description
 
 **SEO Strategies**:
+
 - Incorporated keywords like "OSINT", "MCP", "social media search"
 - Added visual badges for credibility
 - Created structured contribution guidelines
@@ -143,27 +149,32 @@ MCP Client → FastMCP Server → Subprocess → Sherlock CLI → Social Media A
 ## Features Delivered
 
 ### ✅ Core Functionality
+
 - Username search across 400+ social media platforms
 - JSON-formatted results with site names and URLs
 - Real-time search execution via subprocess
 
 ### ✅ Error Handling
+
 - Sherlock CLI availability checks
 - Timeout protection (300-second limit)
 - JSON parsing error recovery
 - Graceful failure responses
 
 ### ✅ Testing Infrastructure
+
 - 100% test coverage for core functions
 - Mocked external dependencies
 - Edge case handling (timeouts, invalid JSON, missing CLI)
 
 ### ✅ Deployment Ready
+
 - Docker containerization
 - Minimal image size with efficient layering
 - Production-ready error logging
 
 ### ✅ Developer Experience
+
 - Comprehensive documentation
 - Contribution guidelines
 - Issue templates for structured feedback
@@ -202,31 +213,37 @@ MCP Client → FastMCP Server → Subprocess → Sherlock CLI → Social Media A
 Based on the 6 GitHub issues created, here's the prioritized development path:
 
 ### High Priority (Next 1-2 Months)
+
 1. **CI/CD Setup**: Automated testing and deployment pipelines
 2. **Feature Expansion**: HTTP/SSE transport and advanced MCP capabilities
 
 ### Medium Priority (2-4 Months)
-3. **Security Enhancements**: Vulnerability scanning and compliance improvements
-4. **Documentation**: Video tutorials and multi-language support
+
+1. **Security Enhancements**: Vulnerability scanning and compliance improvements
+2. **Documentation**: Video tutorials and multi-language support
 
 ### Long-term (4+ Months)
-5. **Community Building**: Discord/Slack integration and conference participation
-6. **Marketing**: Blog posts, featured listings, and broader visibility
+
+1. **Community Building**: Discord/Slack integration and conference participation
+2. **Marketing**: Blog posts, featured listings, and broader visibility
 
 ## Resources and Credits
 
 ### Libraries Used
+
 - [FastMCP](https://gofastmcp.com/) - MCP server framework
 - [Sherlock](https://github.com/sherlock-project/sherlock) - Username enumeration tool
 - [Pytest](https://pytest.org/) - Testing framework
 - [Docker](https://www.docker.com/) - Containerization platform
 
 ### Development Tools
+
 - uv - Python package manager
 - GitHub CLI - Repository management
 - Python 3.13 - Runtime environment
 
 ### Special Thanks
+
 - Sherlock Project maintainers for their excellent OSINT tool
 - FastMCP developers for simplifying MCP implementation
 - Open-source community for inspiration and resources
@@ -243,3 +260,4 @@ For the latest updates, visit [https://github.com/Burnsedia/sherlock-mcp](https:
 
 *Development Log created on January 9, 2026*
 *Total development time: ~15-20 hours across 5 phases*
+
