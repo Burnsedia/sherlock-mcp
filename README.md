@@ -1,6 +1,12 @@
 # Sherlock MCP Server
 
-A Model Context Protocol (MCP) server that integrates the [Sherlock](https://github.com/sherlock-project/sherlock) OSINT CLI tool, allowing AI assistants to search for social media accounts by username across 400+ platforms.
+[![GitHub stars](https://img.shields.io/github/stars/Burnsedia/sherlock-mcp?style=social)](https://github.com/Burnsedia/sherlock-mcp)
+[![GitHub issues](https://img.shields.io/github/issues/Burnsedia/sherlock-mcp)](https://github.com/Burnsedia/sherlock-mcp/issues)
+[![Python Version](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker](https://img.shields.io/badge/docker-ready-blue)](https://hub.docker.com/)
+
+**FastMCP server integration for the Sherlock OSINT tool** – Seamlessly search social media accounts across 400+ platforms using the Model Context Protocol. Perfect for OSINT researchers, cybersecurity professionals, and AI assistants performing username enumeration and open-source intelligence gathering.
 
 ## Features
 
@@ -8,6 +14,13 @@ A Model Context Protocol (MCP) server that integrates the [Sherlock](https://git
 - **Structured Output**: Returns formatted results with site names, URLs, and existence status
 - **Error Handling**: Graceful handling of missing dependencies, timeouts, and failures
 - **Ethical Use**: Designed for responsible OSINT investigations
+- **MCP Integration**: Native support for Model Context Protocol in AI workflows
+
+## Demo
+
+Experience the power of OSINT username searching with this MCP server. Connect to your favorite MCP-compatible AI assistant and query social media presence instantly.
+
+*Placeholder for demo GIF or screenshot – coming soon!*
 
 ## Prerequisites
 
@@ -92,6 +105,18 @@ Searches for social media accounts associated with the given username.
 - `found` (list): Array of found profiles with site, URL, and exists status
 - `total_found` (int): Number of profiles found
 - `error` (str): Error message if any (null on success)
+
+## Contributing
+
+We welcome contributions to enhance this OSINT MCP server! Whether it's bug fixes, new features, or documentation improvements, your input helps the cybersecurity and AI communities.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 ## Ethical Considerations
 
