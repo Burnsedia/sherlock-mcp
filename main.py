@@ -10,8 +10,7 @@ mcp = FastMCP(
 )
 
 
-@mcp.tool()
-def search_username(username: str) -> dict:
+def search_username_impl(username: str) -> dict:
     """
     Search for social media accounts associated with a given username.
 
@@ -94,6 +93,9 @@ def search_username(username: str) -> dict:
         # Clean up temp file
         if os.path.exists(temp_json_path):
             os.unlink(temp_json_path)
+
+
+search_username = mcp.tool()(search_username_impl)
 
 
 if __name__ == "__main__":
