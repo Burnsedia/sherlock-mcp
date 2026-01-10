@@ -1,6 +1,6 @@
 # Contributing to Sherlock MCP Server
 
-Thank you for your interest in contributing to the Sherlock MCP Server project! This open-source initiative integrates the powerful Sherlock OSINT tool with the Model Context Protocol, enabling seamless social media username searches for AI assistants and cybersecurity professionals.
+Thank you for your interest in contributing to the Sherlock MCP Server project! This open-source initiative integrates the powerful Sherlock OSINT tool with the Model Context Protocol, enabling seamless social media username searches for AI assistants and cybersecurity professionals. Our mission is to find truth and counter propaganda through ethical OSINT practices – we welcome contributors who share this commitment to responsible investigation and transparency.
 
 ## How to Contribute
 

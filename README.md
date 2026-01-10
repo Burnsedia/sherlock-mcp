@@ -8,6 +8,18 @@
 
 **FastMCP server integration for the Sherlock OSINT tool** – Seamlessly search social media accounts across 400+ platforms using the Model Context Protocol. Perfect for OSINT researchers, cybersecurity professionals, and AI assistants performing username enumeration and open-source intelligence gathering.
 
+## Mission
+
+This project is built with a commitment to finding truth and countering propaganda through ethical open-source intelligence. In an era of misinformation and digital manipulation, we believe in empowering investigators, journalists, and truth-seekers with transparent, verifiable tools for social media reconnaissance.
+
+Our mission is to:
+- **Promote Truthful Investigation**: Provide reliable tools for fact-checking and source verification
+- **Counter Propaganda**: Enable systematic analysis of online narratives and account authenticity
+- **Maintain Ethical Standards**: Ensure all usage aligns with privacy rights and responsible disclosure
+- **Foster Transparency**: Open-source development for community scrutiny and improvement
+
+*Read our full [Mission Statement](MISSION.md) for detailed principles and applications.*
+
 ## Features
 
 - **Username Search**: Find social media profiles associated with a username
@@ -120,10 +132,28 @@ Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 ## Ethical Considerations
 
+This tool is designed for truth-seeking and countering propaganda, but with great power comes great responsibility. Always use ethically and legally.
+
+### General Guidelines
 - Use only for legitimate OSINT purposes
 - Respect platform terms of service
 - Be aware of privacy implications
 - Consider rate limiting to avoid overwhelming services
+
+### Countering Propaganda Best Practices
+- **Cross-Reference Sources**: Verify account authenticity across multiple platforms
+- **Check Creation Dates**: New accounts may indicate coordinated campaigns
+- **Analyze Patterns**: Look for coordinated posting behaviors or similar content
+- **Respect Privacy**: Focus on public information and avoid doxxing
+- **Fact-Check Results**: Use additional verification tools for claims
+- **Document Methodology**: Maintain transparency in investigative processes
+- **Avoid Harm**: Do not use findings to harass or intimidate individuals
+
+### Responsible Usage
+- Obtain proper authorization for investigations
+- Comply with local laws and regulations
+- Use findings to promote truth and accountability
+- Share results responsibly to avoid contributing to misinformation
 
 ## Troubleshooting
 
