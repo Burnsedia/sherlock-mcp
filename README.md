@@ -14,6 +14,22 @@ A Model Context Protocol (MCP) server that integrates the [Sherlock](https://git
 - Python 3.13+
 - Sherlock CLI tool installed: `pipx install sherlock-project`
 
+## Docker Setup
+
+For containerized deployment using the official Sherlock Docker image:
+
+1. Build the Docker image:
+   ```bash
+   docker build -t sherlock-mcp .
+   ```
+
+2. Run the container:
+   ```bash
+   docker run -it sherlock-mcp
+   ```
+
+This starts the MCP server inside the container. Connect MCP clients via stdio pipes or configure HTTP transport for remote access.
+
 ## Installation
 
 1. Clone this repository:
