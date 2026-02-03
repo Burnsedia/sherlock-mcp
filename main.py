@@ -1,11 +1,10 @@
-
 from fastmcp import FastMCP
 from anyio import to_thread
+
 from sherlock_project.sherlock import sherlock
 from sherlock_project.sites import SitesInformation
 from sherlock_project.notify import QueryNotifyPrint
 from sherlock_project.result import QueryResult
-
 
 
 mcp = FastMCP(name="Sherlock MCP Server")
@@ -23,9 +22,9 @@ def _search_username(username: str, sites=None) -> dict:
 
     # OPTIONAL: filter sites
     if sites:
-        sites_info.sites = {
-            name: site
-            for name, site in sites_info.sites.items()
+        sites_info.site_data = {
+            name: data
+            for name, data in sites_info.site_data.items()
             if name in sites
         }
 
@@ -33,7 +32,7 @@ def _search_username(username: str, sites=None) -> dict:
 
     results = sherlock(
         username,
-        sites_info.sites,   # ✅ THIS IS THE FIX
+        sites_info.site_data,  # ✅ THIS is the correct object
         query_notify,
         timeout=10,
     )
@@ -50,7 +49,7 @@ def _search_username(username: str, sites=None) -> dict:
         "error": None,
     }
 
-   
+
 @mcp.tool()
 async def search_username(username: str, sites=None) -> dict:
     return await to_thread.run_sync(_search_username, username, sites)
