@@ -1,5 +1,5 @@
 import pytest
-from main import search_username_impl
+from main import search_username
 
 
 def test_integration_real_sherlock():
