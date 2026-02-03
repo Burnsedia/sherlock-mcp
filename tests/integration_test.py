@@ -8,7 +8,7 @@ def test_integration_real_sherlock():
         "Burnsedia"  # Update with a username known to exist on some platforms
     )
 
-    result = search_username_impl(existing_username)
+    result = search_username(existing_username)
 
     # Check that some results are returned for known valid username
     assert result["total_found"] > 0
@@ -28,7 +28,7 @@ def test_integration_nonexistent_user():
         "clearlydoesnotexist1234"  # Update with a guaranteed non-existent username
     )
 
-    result = search_username_impl(nonexistent_user)
+    result = search_username(nonexistent_user)
 
     # Ensure no results are returned for non-existent username
     assert result["total_found"] == 0
@@ -40,7 +40,7 @@ def test_integration_invalid_input():
     # Perform a real search with invalid input
     invalid_input = ""  # Empty input
 
-    result = search_username_impl(invalid_input)
+    result = search_username(invalid_input)
 
     # Ensure no results and an appropriate error message
     assert result["total_found"] == 0
