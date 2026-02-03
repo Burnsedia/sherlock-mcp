@@ -8,6 +8,7 @@ dependencies = [
     "fastmcp>=2.14.2",
     "mcp>=1.0.0",
     "pytest>=9.0.2",
+    "sherlock-project>=0.16.0",
 ]
 
 [tool.pytest.ini_options]
