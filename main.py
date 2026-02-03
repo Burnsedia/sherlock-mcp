@@ -17,6 +17,7 @@ def _search_username(username: str) -> dict:
 
     results = sherlock(
         username=username,
+        site_list=sites,
         timeout=10,
         print_all=False,
         color=False,

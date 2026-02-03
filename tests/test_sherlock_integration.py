@@ -4,7 +4,7 @@ from main import _search_username
 
 @pytest.mark.integration
 def test_real_sherlock_existing_user():
-    result = _search_username("torvalds", ["github"])
+    result = _search_username("Burnsedia")
 
     assert result["total_found"] >= 1
     assert len(result["found"]) == result["total_found"]
@@ -16,7 +16,7 @@ def test_real_sherlock_existing_user():
 
 @pytest.mark.integration
 def test_real_sherlock_nonexistent_user():
-    result = _search_username("clearlydoesnotexist123456", ["github"])
+    result = _search_username("clearlydoesnotexist123456")
 
     assert result["total_found"] == 0
     assert result["found"] == []
