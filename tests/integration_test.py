@@ -2,6 +2,7 @@ import pytest
 from main import search_username
 
 
+@pytest.mark.integration
 def test_integration_real_sherlock():
     # Perform a real search with Sherlock CLI (requires Sherlock installed)
     existing_username = (
@@ -22,6 +23,7 @@ def test_integration_real_sherlock():
         assert entry["exists"] is True
 
 
+@pytest.mark.integration
 def test_integration_nonexistent_user():
     # Perform a real search with Sherlock CLI for nonexistent user
     nonexistent_user = (
@@ -36,6 +38,7 @@ def test_integration_nonexistent_user():
     assert result["error"] is None
 
 
+@pytest.mark.integration
 def test_integration_invalid_input():
     # Perform a real search with invalid input
     invalid_input = ""  # Empty input
