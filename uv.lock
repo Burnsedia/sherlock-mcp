@@ -1379,6 +1379,15 @@ wheels = [
 ]
 
 [[package]]
+name = "sherlock"
+version = "0.4.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/17/3c/4f44dbb806efdd86005b3ac183a6c9c27f361e3ef473e41f5f553758ea6f/sherlock-0.4.1.tar.gz", hash = "sha256:e620f498d5e2618005d3b5e08cc34106c1ab09e9c58d4310fc268b011700b6f5", size = 17012, upload-time = "2023-02-18T14:50:53.85Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/7b/75242a72cdfd228014d470f8404357e357c99c36ad44744133cd1fd07813/sherlock-0.4.1-py3-none-any.whl", hash = "sha256:811f1f410b4be035726bf602d00c05d5969534d52158725cd3562ccadd2f7325", size = 16443, upload-time = "2023-02-18T14:50:51.623Z" },
+]
+
+[[package]]
 name = "sherlock-mcp"
 version = "0.1.0"
 source = { virtual = "." }
@@ -1386,6 +1395,7 @@ dependencies = [
     { name = "fastmcp" },
     { name = "mcp" },
     { name = "pytest" },
+    { name = "sherlock" },
     { name = "sherlock-project" },
 ]
 
@@ -1402,6 +1412,7 @@ requires-dist = [
     { name = "pytest", specifier = ">=9.0.2" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.0.0" },
+    { name = "sherlock", specifier = ">=0.4.1" },
     { name = "sherlock-project", specifier = ">=0.16.0" },
 ]
 provides-extras = ["dev"]

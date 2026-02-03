@@ -1,7 +1,7 @@
 from fastmcp import FastMCP
-from sherlock.sherlock import sherlock
-from sherlock.result import QueryResult
 from anyio import to_thread
+from sherlock_project.sherlock import sherlock
+from sherlock_project.result import QueryResult
 
 
 mcp = FastMCP(
