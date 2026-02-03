@@ -9,7 +9,7 @@ mcp = FastMCP(
     instructions="Search for social media accounts by username across 400+ platforms using the Sherlock OSINT tool. Provide a username to find associated profiles.",
 )
 
-def _search_username(username: str, sites: list[str] | None = None) -> dict:
+def _search_username(username: str) -> dict:
     """
     Pure Python Sherlock adapter.
     No MCP. No FastAPI. No subprocess.
@@ -17,7 +17,6 @@ def _search_username(username: str, sites: list[str] | None = None) -> dict:
 
     results = sherlock(
         username=username,
-        site_list=sites,
         timeout=10,
         print_all=False,
         color=False,
@@ -46,7 +45,7 @@ def _search_username(username: str, sites: list[str] | None = None) -> dict:
 
 
 @mcp.tool()
-async def search_username(username: str, sites: list[str] | None = None) -> dict:
+async def search_username(username: str) -> dict:
     """
     Pure Python Sherlock adapter.
     No MCP. No FastAPI. No subprocess.
