@@ -1,6 +1,7 @@
 from fastmcp import FastMCP
 from sherlock.sherlock import sherlock
 from sherlock.result import QueryResult
+from anyio import to_thread
 
 
 mcp = FastMCP(
@@ -8,8 +9,7 @@ mcp = FastMCP(
     instructions="Search for social media accounts by username across 400+ platforms using the Sherlock OSINT tool. Provide a username to find associated profiles.",
 )
 
-@mcp.tool()
-def search_username(username: str, sites: list[str] | None = None) -> dict:
+def _search_username(username: str, sites: list[str] | None = None) -> dict:
     """
     Pure Python Sherlock adapter.
     No MCP. No FastAPI. No subprocess.
@@ -43,6 +43,16 @@ def search_username(username: str, sites: list[str] | None = None) -> dict:
     }
 
 
+
+
+@mcp.tool()
+async def search_username(username: str, sites: list[str] | None = None) -> dict:
+    """
+    Pure Python Sherlock adapter.
+    No MCP. No FastAPI. No subprocess.
+    """
+    return await to_thread.run_sync(_search_username, username, sites)
+    
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
